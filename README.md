@@ -315,12 +315,16 @@ My dev board has shown some strange anomolies, including:
 
 Thus, I have a feeling the board I chose might have a fault.
 
-| Board No. | Bat V as found | Idle current org fw | Notes          |
-| --------- | -------------- | ------------------- | -------------- |
-|     1     |    0.3v        |        >3mA         | Corrosion on SWD header |
-|     2     |    3.682v      |        6.8uA        | |
-|     3     |    3.439v      |                     | |
-|     4     |    0.206v      |                     | Corrosion on SWD and display |
+| Board No. | Bat V as found | Idle current org fw | on USB power | Notes          |
+| --------- | -------------- | ------------------- | ------------ | -------------- |
+|     1     |    0.3v        |        >3mA         | funky displ. | Corrosion on SWD header |
+|     2     |    3.682v      |        6.8uA        | OK           | |
+|     3     |    3.439v      |        6.7uA        | OK           | |
+|     4     |    0.206v      | 450uA, displ. duff  | not right    | Corrosion on SWD and display |
+
+I think the finding here is - if you find one of these vapes with a totally flat battery and/or
+some corrosion on the PCB then maybe it's already bust, and you might save yourself a bunch of effort
+by just binning it.
 
 [1]: https://hayativapor.com/pages/product-pro-ultra
 
