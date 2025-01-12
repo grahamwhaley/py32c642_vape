@@ -95,6 +95,11 @@ up very little, but, there was another vape related reference on
 also pointed to a Chinese version of the datasheet, which also turns up on
 [a github here](https://github.com/decaday/PY32_Docs/tree/main/PY32C642/Datasheet).
 
+  > Update: [decaday](https://github.com/decaday) has now also acquired and added the
+    [firmware package](https://github.com/decaday/PY32_Docs/tree/main/PY32C642) for the PY32C642!
+	You might want to reference that package alongside or instead of my test examples to check
+	the PY32C642 is set up the same as the PY32F002B.
+
 Somewhere I found another reference that noted the C642 was very similar to an CY32F002B.
 We'll get more on that later, but you can find some documents in the [Documents folder](./Documents).
 
