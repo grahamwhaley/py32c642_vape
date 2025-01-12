@@ -292,7 +292,44 @@ board helped highlight some of the traces.
 
 ## Schematic
 
+Here is the schematic I have derived so far. I think the only bit I've not really figured out is
+exactly how the USB socket is wired. It looks to have a couple of pull up/down resistors, but I've
+not figured out the pinout for the socket, and thus their actual function. Nor have I traced the
+VBUS pin out from the socket. Schematic drawn in Kicad 8. You should find a couple of symbol
+libraries in with the schematic that add the PY32C642 and FET pinouts.
+
 ![schematic](./schematic/schematic.png)
+
+## Useable pins
+
+Ultimately, if you are not going to use this board as a vape, then you will want to know what
+pins are available for potential re-use for other projects.
+
+First, there are the obvious ones - we have the display, two pressure sensor inputs, and the two FET
+outputs.  But, it's not quite that simple. We actually have four FET outputs, and a FET feedback line.
+
+The pressure sensor inputs may provide some nice extra functionality. One has an ADC and CMP functions
+and the other some timer functions, so that could provide quite a bit of scope:
+
+  - PA3 - also ADC_IN1 and some CMP2 functions
+  - PB5 - TIM1_CH3 and TIM14_CH1 functions
+
+Then the FET outputs also have multiple possibilities, and if you are feeling brave, you could lift
+the 6R8 resistors off the board and make four separate FET outputs (with one set higher power than
+the other).
+
+  - PA7 - TIM1 and ADC, and MCO (clock out)
+  - PA5 - TIM1 and TIM14
+  - PB7 - TIM14 and OSCOUT
+  - PC1 - only OSCIN
+
+and then the FET sense pins:
+
+  - PA6 - EventOut, ADC
+  - PA4 - TIM1, TIM14, ADC, CMP2
+
+Overall the, it looks like across the potential 8 pins we can maybe access most of the chip functions
+are covered somewhere.
 
 ## Examples
 
